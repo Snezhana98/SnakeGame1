@@ -8,10 +8,8 @@
         Title="MainWindow" Height="663" Width="740" WindowStartupLocation="CenterScreen" >
     <DockPanel Background="#FFD2D2F1">
         <StackPanel Background="#FF2F9B9B" DockPanel.Dock="Right" Width="100" HorizontalAlignment="Right">
-            <Button Content="Старт" HorizontalAlignment="Center" Margin="0,200,0,0" Height="48" Width="74" Click="OnClickStart" />
+            <Button Content="Старт" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,200,0,0" Height="48" Width="74" Click="OnClickStart" />
         </StackPanel>
-        <Canvas x:Name="canvas">
-            <TextBlock x:Name="TextBlockFood" Canvas.Left="201" Canvas.Top="274" Text="0" TextWrapping="Wrap"/>
-        </Canvas>
+        <Canvas x:Name="canvas"/>
     </DockPanel>
 </Window>

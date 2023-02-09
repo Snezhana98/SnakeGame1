@@ -18,9 +18,9 @@ namespace SnakeGame1
             scaleX = canv.ActualWidth / w;
             scaleY = canv.ActualHeight / h;
         }
-        public void Start(TextBlock foodText)
+        public void Start()
         {
-            food = new Food(foodText);
+            food = new Food();
             food.FoodGeneration();
             food.PaintFood();
 

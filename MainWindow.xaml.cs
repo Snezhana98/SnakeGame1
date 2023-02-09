@@ -29,7 +29,7 @@ namespace SnakeGame1
         private void OnClickStart(object sender, RoutedEventArgs e)
         {
             main = new GameField(canvas);
-            main.Start(TextBlockFood);
+            main.Start();
         }
 
     }
