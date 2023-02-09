@@ -35,7 +35,7 @@ namespace SnakeGame1
             fragment.point.Y = h / 2;
             listFragments.Add(fragment);
         }
-
+        
         public void PaintSnake()
         {
             foreach(Fragment fragment in listFragments)
