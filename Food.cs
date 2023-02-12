@@ -13,6 +13,7 @@ namespace SnakeGame1
         int x, y;
         //Ellipse ellipse;
         TextBlock textBlock;
+        Viewbox viewbox = new Viewbox();
         List<string> foodEmoji = new List<string>()
             { "🍉", "🍌", "🥕", "🥒", "🍅", "🍓","🍒","🍍","🥭","🍎","🍗" };
         public Food()
@@ -24,15 +25,17 @@ namespace SnakeGame1
             //GameField.canvas.Children.Add(ellipse);
             Random random = new Random();
             textBlock = new TextBlock();
+            
             int index = random.Next(foodEmoji.Count);
             string nextEmoji = foodEmoji[index];
             textBlock.Text = nextEmoji;
-            textBlock.Width = GameField.scaleX;
-            textBlock.Height = GameField.scaleY;
+            viewbox.Child = textBlock;
+            viewbox.Width = GameField.scaleX;
+            viewbox.Height = GameField.scaleY;
             textBlock.FontSize = 20;
             textBlock.Foreground = Brushes.Red;
-
-            GameField.canvas.Children.Add(textBlock);
+            
+            GameField.canvas.Children.Add(viewbox);
         }
 
 
@@ -45,8 +48,8 @@ namespace SnakeGame1
         }
         public void PaintFood()
         {
-            Canvas.SetLeft(textBlock, x * GameField.scaleX);
-            Canvas.SetTop(textBlock, y * GameField.scaleY);
+            Canvas.SetLeft(viewbox, x * GameField.scaleX);
+            Canvas.SetTop(viewbox, y * GameField.scaleY);
         }
     }
 }

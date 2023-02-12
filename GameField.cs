@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Timers;
 using System.Windows.Controls;
 
 namespace SnakeGame1
@@ -26,6 +27,12 @@ namespace SnakeGame1
 
             snake = new Snake(w, h);
             snake.PaintSnake();
+        }
+
+        public void timer()
+        {
+            Timer time = new Timer();
+            time.Interval = 1000;
         }
     }
 }

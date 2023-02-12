@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="663" Width="740" WindowStartupLocation="CenterScreen" >
     <DockPanel Background="#FFD2D2F1">
-        <StackPanel Background="#FF2F9B9B" DockPanel.Dock="Right" Width="100" HorizontalAlignment="Right">
-            <Button Content="Старт" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,200,0,0" Height="48" Width="74" Click="OnClickStart" />
-        </StackPanel>
+        <Grid Background="#FF2F9B9B" DockPanel.Dock="Right">
+            <Button Content="Старт" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"  Height="50" Width="80" Click="OnClickStart" FontSize="20" FontFamily="Showcard Gothic" FontWeight="Bold" />
+        </Grid>
+        
         <Canvas x:Name="canvas"/>
     </DockPanel>
 </Window>
