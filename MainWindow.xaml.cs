@@ -28,9 +28,40 @@ namespace SnakeGame1
 
         private void OnClickStart(object sender, RoutedEventArgs e)
         {
-            main = new GameField(canvas);
+            
+            main = new GameField(canvas, grid);
+            
             main.Start();
+            
         }
 
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.W:
+                    main.k = GameField.MoveDirect.up;
+                    break;
+                case Key.S:
+                    main.k = GameField.MoveDirect.down;
+                    break;
+                case Key.D:
+                    main.k = GameField.MoveDirect.right;
+                    break;
+                case Key.A:
+                    main.k = GameField.MoveDirect.left;
+                    break;
+            }
+        }
+
+        private void OnClickStop(object sender, RoutedEventArgs e)
+        {
+            main.timerStop();
+        }
+
+        private void OnClickContinue(object sender, RoutedEventArgs e)
+        {
+            main.timerContinue();
+        }
     }
 }

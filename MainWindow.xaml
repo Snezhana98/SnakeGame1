@@ -5,12 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SnakeGame1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="663" Width="740" WindowStartupLocation="CenterScreen" >
-    <DockPanel Background="#FFD2D2F1">
-        <Grid Background="#FF2F9B9B" DockPanel.Dock="Right">
-            <Button Content="Старт" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"  Height="50" Width="80" Click="OnClickStart" FontSize="20" FontFamily="Showcard Gothic" FontWeight="Bold" />
+        Title="MainWindow" Height="640" Width="636" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" >
+    <DockPanel x:Name="TextBlockScore" Background="#FFD2D2F1">
+        <Grid x:Name="grid" DockPanel.Dock="Top" Background="#FF2E9C9C"  >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Content="Старт" Background="White" Height="50" Width="150" Click="OnClickStart" FontSize="20" FontFamily="Showcard Gothic" FontWeight="Bold" Grid.Column="0"  />
+            <Button Content="Пауза" Background="White" Height="50" Width="150" FontSize="20" FontFamily="Showcard Gothic" FontWeight="Bold"  Grid.Column="1" Click="OnClickStop" />
+            <Button Content="Продолжить" Background="White" Height="50" Width="150" FontSize="20" FontFamily="Showcard Gothic" FontWeight="Bold"  Grid.Column="2" Click="OnClickContinue" />
+            <Viewbox />
         </Grid>
-        
+
+
+
         <Canvas x:Name="canvas"/>
     </DockPanel>
 </Window>
